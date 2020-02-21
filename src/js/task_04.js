@@ -26,16 +26,22 @@ let leftCredits;
 const inputValue = Number(prompt('Какое количество дроидов Вы хочет купить?'));
 if (inputValue === 0) {
   alert('Отменено пользователем!');
+  console.log(alert('Отменено пользователем!'));
 }
 totalPrice = inputValue * pricePerDroid;
 if (totalPrice > credits) {
-  alert(`Недостаточно средств на счету!`);
+  alert('Недостаточно средств на счету!');
+  console.log('Недостаточно средств на счету!');
 }
 leftCredits = credits - totalPrice;
 if (totalPrice < credits) {
   alert(
     `Вы купили ${inputValue} дроидов, на счету осталось ${leftCredits} кредитов.`,
   );
+  console.log(
+    `Вы купили ${inputValue} дроидов, на счету осталось ${leftCredits} кредитов.`,
+  );
 } else {
   alert('Попробуйте еще раз!');
+  console.log('Попробуйте еще раз!');
 }

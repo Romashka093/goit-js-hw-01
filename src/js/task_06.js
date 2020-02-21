@@ -13,5 +13,15 @@
 // при этом результат prompt плюсовать к общей сумме не нужно, после чего снова пользователю предлагается
 // ввести число в prompt.
 
-let input;
+let inputValue;
 let total = 0;
+
+do {
+  inputValue = Number(prompt('Пожалуйста, введите число:'));
+  console.log('inputValue: ', inputValue);
+  total = total += inputValue;
+} while (inputValue);
+if (inputValue === 0) {
+  alert(`Общая сумма чисел равна ${total}`);
+  console.log(`Общая сумма чисел равна ${total}`);
+} else alert('Было введено не число, попробуйте еще раз!');

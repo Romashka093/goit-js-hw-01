@@ -15,18 +15,24 @@
 const ADMIN_PASSWORD = 'jqueryismyjam';
 let message;
 
+//Option-01
+
 const inputValue = prompt('Enter admin password:');
 if (inputValue === null) {
   message = alert('Отменено пользователем!');
+  console.log('Отменено пользователем!');
 } else if (inputValue === ADMIN_PASSWORD) {
   message = alert('Добро пожаловать!');
+  console.log('Добро пожаловать!');
 } else message = alert('Доступ запрещен, неверный пароль!');
 
+//Option-02
+
 // const inputValue = prompt('Enter admin password:');
-// {
+// if (inputValue === null) {
 //   message = alert('Отменено пользователем!');
-// }
-// {
+//   console.log('Отменено пользователем!');
+// } else {
 //   inputValue === ADMIN_PASSWORD
 //     ? (message = alert('Добро пожаловать!'))
 //     : (message = alert('Доступ запрещен, неверный пароль!'));
