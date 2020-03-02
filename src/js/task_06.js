@@ -1,5 +1,7 @@
 'use strict';
-// Задание 6
+
+console.warn('TASK-06');
+
 // Напиши скрипт который просит посетителя ввести число в prompt до тех пор,
 // пока посетитель на нажмет Cancel и каждый раз добавляет введенное значение к общей сумме.
 
@@ -17,11 +19,13 @@ let inputValue;
 let total = 0;
 
 do {
-  inputValue = Number(prompt('Пожалуйста, введите число:'));
+  inputValue = prompt('Пожалуйста, введите число:');
   console.log('inputValue: ', inputValue);
-  total = total += inputValue;
-} while (inputValue);
-if (inputValue === 0) {
-  alert(`Общая сумма чисел равна ${total}`);
-  console.log(`Общая сумма чисел равна ${total}`);
-} else alert('Было введено не число, попробуйте еще раз!');
+  if (Number.isNaN(Number(inputValue))) {
+    alert('Было введено не число, попробуйте еще раз!');
+  } else {
+    total += Number(inputValue);
+    console.log('total: ', total);
+  }
+} while (inputValue !== null && inputValue !== '');
+alert(`Общая сумма чисел равна ${total}`);

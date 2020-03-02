@@ -1,5 +1,7 @@
 'use strict';
-// Задание 3
+
+console.warn('TASK-03');
+
 // Напиши скрипт имитирующий авторизацию администратора в панели управления.
 
 // Есть переменная message в которую будет записано сообщение о результате.
@@ -18,6 +20,7 @@ let message;
 //Option-01
 
 const inputValue = prompt('Enter admin password:');
+console.log('inputValue: ', inputValue);
 if (inputValue === null) {
   message = alert('Отменено пользователем!');
   console.log('Отменено пользователем!');
